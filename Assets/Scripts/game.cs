@@ -165,7 +165,7 @@ public class game : MonoBehaviour
             var myTarget = varmanager.Instance.getCurrentWord();
 
             // Log Answer
-            StartCoroutine(LogAnswer(varmanager.Instance.getCurrentWord()));
+            StartCoroutine(LogAnswer(myAnswer));
 
             // Repeat Full Word
             speakword(varmanager.Instance.getCurrentWord());
