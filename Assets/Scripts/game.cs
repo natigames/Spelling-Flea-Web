@@ -143,7 +143,7 @@ public class game : MonoBehaviour
         if (needsIAP)
         {
             if (varmanager.Instance.usepaypal())
-                Application.OpenURL("https://nati.games/spellingflea/paypal.cfm");
+                Application.OpenURL("https://nati.games/spellingflea/");
             else
                 SceneManager.LoadScene("purchase");
         }

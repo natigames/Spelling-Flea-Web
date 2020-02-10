@@ -51,7 +51,7 @@ public class menu : MonoBehaviour
     public void Purchase()
     {
         if (varmanager.Instance.usepaypal())
-            Application.OpenURL("https://nati.games/spellingflea/paypal.cfm");
+            Application.OpenURL("https://nati.games/spellingflea/");
         else
             SceneManager.LoadScene("purchase");
     }
