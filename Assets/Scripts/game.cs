@@ -28,6 +28,7 @@ public class game : MonoBehaviour
     public Text remainDisplay;
     public Text packDisplay;
     public Text levelDisplay;
+    public Text feedback;
 
     // Var for IAP Check
     public bool needsIAP = false;
@@ -169,6 +170,8 @@ public class game : MonoBehaviour
 
             // Repeat Full Word
             speakword(varmanager.Instance.getCurrentWord());
+            feedback.text = varmanager.Instance.getCurrentWord();
+
 
             // Grade Word & animate
             gradeAnswer(myAnswer,myTarget);
@@ -227,6 +230,7 @@ public class game : MonoBehaviour
         NewAudio.Instance.PlayOneShot(rightSound);
         yield return new WaitForSeconds(2f);
         flea.instance.doAnim("normal");
+        feedback.text = "";
     }
 
     // Play audio & video for wrong word
@@ -236,6 +240,7 @@ public class game : MonoBehaviour
         NewAudio.Instance.PlayOneShot(wrongSound);
         yield return new WaitForSeconds(2f);
         flea.instance.doAnim("normal");
+        feedback.text = "";
     }
 
 

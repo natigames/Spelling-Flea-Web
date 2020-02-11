@@ -7,8 +7,8 @@ using System.Collections;
 public class varmanager : MonoBehaviour
 {
 
-    public bool usePayPal = true; //set to true when compiling for web 
-    private info info;
+    public bool usePayPal = false; //set to true when compiling for web 
+    private info info;  
 
     public float score = 0f;
     public List<string> right;
